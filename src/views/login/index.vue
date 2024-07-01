@@ -85,7 +85,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { reactive, ref } from 'vue';
+  import { reactive, ref, onMounted } from 'vue';
   import { useRoute, useRouter } from 'vue-router';
   import { useUserStore } from '@/store/modules/user';
   import { useMessage } from 'naive-ui';
@@ -120,8 +120,7 @@
   const router = useRouter();
   const route = useRoute();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     formRef.value.validate(async (errors) => {
       if (!errors) {
         const { username, password } = formInline;
@@ -153,13 +152,16 @@
       }
     });
   };
+  onMounted(() => {
+    handleSubmit();
+  });
 </script>
 
 <style lang="less" scoped>
   .view-account {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 0px;
     overflow: auto;
 
     &-container {
