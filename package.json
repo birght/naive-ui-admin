@@ -1,17 +1,17 @@
 {
   "name": "naive-ui-admin",
-  "version": "1.9.2",
+  "version": "2.3.21",
   "author": {
-    "name": "Ahjung",
-    "email": "735878602@qq.com",
-    "url": "https://github.com/jekip/naive-ui-admin"
+    "name": "shi",
+    "email": "hero@shiwanyu.com"
   },
   "private": true,
   "scripts": {
     "bootstrap": "pnpm install",
     "serve": "pnpm run dev",
     "dev": "vite",
-    "build": "vite build && esno ./build/script/postBuild.ts",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
     "build:no-cache": "pnpm clean:cache && pnpm run build",
     "report": "cross-env REPORT=true pnpm run build",
     "preview": "pnpm run build && vite preview",
@@ -32,7 +32,7 @@
     "@vueuse/core": "^9.13.0",
     "axios": "^1.6.8",
     "blueimp-md5": "^2.19.0",
-    "date-fns": "^2.30.0",
+    "date-fns": "^2.30.2",
     "echarts": "^5.5.0",
     "element-resize-detector": "^1.2.4",
     "lodash-es": "^4.17.21",
