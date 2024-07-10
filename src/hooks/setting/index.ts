@@ -13,7 +13,7 @@ export const useGlobSetting = (): Readonly<GlobConfig> => {
     VITE_GLOB_PROD_MOCK,
     VITE_GLOB_IMG_URL,
   } = getAppEnvConfig();
-
+  console.log(VITE_GLOB_APP_TITLE,'定位问题21')
   if (!/[a-zA-Z\_]*/.test(VITE_GLOB_APP_SHORT_NAME)) {
     warn(
       `VITE_GLOB_APP_SHORT_NAME Variables can only be characters/underscores, please modify in the environment variables and re-running.`
