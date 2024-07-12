@@ -42,7 +42,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     redirect: '/standardized-supervision/special-inspection-analysis',
     meta: {
-      title: '标准化监督检查分析',
+      title: '检查分析',
       icon: renderIcon(FileTextOutlined),
     },
     children: [
@@ -99,7 +99,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     redirect: '/sampling-management/unqualified-product',
     meta: {
-      title: '两品一械抽检管理统计分析',
+      title: '抽检分析',
       icon: renderIcon(CheckCircleOutlined),
     },
     children: [

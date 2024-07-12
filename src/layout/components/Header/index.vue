@@ -72,20 +72,6 @@
       </n-breadcrumb>
     </div>
     <div class="layout-header-right">
-      <div
-        class="layout-header-trigger layout-header-trigger-min"
-        v-for="item in iconList"
-        :key="item.icon"
-      >
-        <n-tooltip placement="bottom">
-          <template #trigger>
-            <n-icon size="18">
-              <component :is="item.icon" v-on="item.eventObject || {}" />
-            </n-icon>
-          </template>
-          <span>{{ item.tips }}</span>
-        </n-tooltip>
-      </div>
       <!--切换全屏-->
       <div class="layout-header-trigger layout-header-trigger-min">
         <n-tooltip placement="bottom">
@@ -101,19 +87,18 @@
       <div class="layout-header-trigger layout-header-trigger-min">
         <n-dropdown trigger="hover" @select="avatarSelect" :options="avatarOptions">
           <div class="avatar">
-            <n-avatar round :src="websiteConfig.logo">
-             
+            <!-- <n-avatar round :src="websiteConfig.logo">
               <template #icon>
                 <UserOutlined />
               </template>
-            </n-avatar>
+            </n-avatar> -->
             <n-divider vertical />
             <span>{{ username }}</span>
           </div>
         </n-dropdown>
       </div>
       <!--设置-->
-      <div class="layout-header-trigger layout-header-trigger-min" @click="openSetting">
+      <!-- <div class="layout-header-trigger layout-header-trigger-min" @click="openSetting">
         <n-tooltip placement="bottom-end">
           <template #trigger>
             <n-icon size="18" style="font-weight: bold">
@@ -122,7 +107,7 @@
           </template>
           <span>项目配置</span>
         </n-tooltip>
-      </div>
+      </div> -->
     </div>
   </div>
   <!--项目配置-->
@@ -297,10 +282,6 @@
         },
       ];
       const avatarOptions = [
-        {
-          label: '个人设置',
-          key: 1,
-        },
         {
           label: '退出登录',
           key: 2,
