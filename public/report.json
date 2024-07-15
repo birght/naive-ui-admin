@@ -5,8 +5,8 @@
     "component": "Layout",
     "redirect": "/comprehensive-regulation/drug-production",
     "meta": {
-      "title": "综合监管",
-      "icon": "ProjectOutlined"
+      "title": "综合监管22",
+      "icon": "AreaChartOutlined"
     },
     "children": [
       {

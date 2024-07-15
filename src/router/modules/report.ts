@@ -1,21 +1,13 @@
 import { RouteRecordRaw } from 'vue-router';
 import { Layout } from '@/router/constant';
 import { renderIcon } from '@/utils/index';
-import * as Icons from '@vicons/antd';
+import * as Icons from '@vicons/antd'; // 导入所有图标
 
 const IFrame = () => import('@/views/iframe/index.vue');
 
-const dynamicImportIcon = (iconName: string) => {
-  const icon = Icons[iconName];
-  if (!icon) {
-    console.warn(`Icon not found: ${iconName}`);
-  }
-  return icon;
-};
-
 const fetchRoutes = async (): Promise<Array<RouteRecordRaw>> => {
   try {
-    const response = await fetch('/report.json');
+    const response = await fetch('./report.json');
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -34,9 +26,11 @@ const fetchRoutes = async (): Promise<Array<RouteRecordRaw>> => {
           );
         }
         if (route.meta && route.meta.icon) {
-          const icon = dynamicImportIcon(route.meta.icon);
+          const icon = (Icons as any)[route.meta.icon];
           if (icon) {
             route.meta.icon = renderIcon(icon);
+          } else {
+            console.warn(`Icon not found: ${route.meta.icon}`);
           }
         }
         if (route.component === 'Layout') {
@@ -53,10 +47,6 @@ const fetchRoutes = async (): Promise<Array<RouteRecordRaw>> => {
   }
 };
 
-const initializeRoutes = async () => {
-  const routes: Array<RouteRecordRaw> = await fetchRoutes();
-  return routes;
-};
+const routes: Array<RouteRecordRaw> = await fetchRoutes();
 
-const routes = await initializeRoutes();
 export default routes;
