@@ -92,6 +92,7 @@
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-mock": "^2.9.8",
     "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-top-level-await": "^1.4.1",
     "vue-demi": "^0.13.11",
     "vue-draggable-next": "^2.2.1",
     "vue-eslint-parser": "^9.4.2",

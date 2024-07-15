@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/comprehensive-regulation",
+    "name": "ComprehensiveRegulation",
+    "component": "Layout",
+    "redirect": "/comprehensive-regulation/drug-production",
+    "meta": {
+      "title": "综合监管",
+      "icon": "ProjectOutlined"
+    },
+    "children": [
+      {
+        "path": "drug-production",
+        "name": "drug-production-daily-inspection",
+        "meta": {
+          "title": "药品生产企业日常检查统计",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=2ea562a3c39c629b"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "cosmetics-inspection",
+        "name": "cosmetics-inspection-personnel",
+        "meta": {
+          "title": "化妆品检查人员统计",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=429b36c14755a4c5"
+        },
+        "component": "IFrame"
+      }
+    ]
+  },
+  {
+    "path": "/standardized-supervision",
+    "name": "StandardizedSupervision",
+    "component": "Layout",
+    "redirect": "/standardized-supervision/special-inspection-analysis",
+    "meta": {
+      "title": "检查分析",
+      "icon": "FileTextOutlined"
+    },
+    "children": [
+      {
+        "path": "special-inspection-analysis",
+        "name": "special-inspection-analysis",
+        "meta": {
+          "title": "专项检查分析",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=e97a723973a865cd"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "enterprise-statistics",
+        "name": "enterprise-statistics",
+        "meta": {
+          "title": "查处企业统计",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=616b167dfb53d578"
+        },
+        "component": "IFrame"
+      }
+    ]
+  }
+]
