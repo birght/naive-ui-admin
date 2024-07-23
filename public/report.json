@@ -58,5 +58,170 @@
         "component": "IFrame"
       }
     ]
+  },
+  {
+    "path": "/sampling-management",
+    "name": "SamplingManagement",
+    "component": "Layout",
+    "redirect": "/sampling-management/unqualified-product",
+    "meta": {
+      "title": "抽检分析",
+      "icon": "CheckCircleOutlined"
+    },
+    "children": [
+      {
+        "path": "unqualified-product",
+        "name": "unqualified-product-distribution",
+        "meta": {
+          "title": "不合格产品生产企业地域分布统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=b40a5f891bdee294"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "enterprise-sampling-coverage",
+        "name": "enterprise-sampling-coverage",
+        "meta": {
+          "title": "企业抽检覆盖率统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=6a30aceafce62ab4"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "product-sampling-coverage",
+        "name": "product-sampling-coverage",
+        "meta": {
+          "title": "品种抽检覆盖率统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=9c2a2814933e9028"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "sample-distribution",
+        "name": "sample-distribution",
+        "meta": {
+          "title": "各市县抽样样本分布情况",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=62fa68be88e4c498"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "inspection-batch-statistics",
+        "name": "inspection-batch-statistics",
+        "meta": {
+          "title": "检验机构检验批次/不合格批次统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=e14bd9859bddaa3b"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "repeatedly-unqualified-statistics",
+        "name": "repeatedly-unqualified-statistics",
+        "meta": {
+          "title": "被抽样企业多次不合格统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=cce86ebc74acd0ad"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "sampling-data-ranking",
+        "name": "sampling-data-ranking",
+        "meta": {
+          "title": "各药监局抽样数据排名统计",
+          "frameSrc": "http://10.4.129.55:8080dataviz-web/src/q.html?s=d61a7c0250365720"
+        },
+        "component": "IFrame"
+      }
+    ]
+  },
+  {
+    "path": "/pharmaceutical/personnel",
+    "name": "pharmaceutical",
+    "component": "Layout",
+    "redirect": "/pharmaceutical/personnel",
+    "meta": {
+      "title": "药学人员大数据",
+      "icon": "HddOutlined"
+    },
+    "children": [
+      {
+        "path": "personnel",
+        "name": "personnel",
+        "meta": {
+          "title": "药学人员大数据",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=ee7c23963730191a"
+        },
+        "component": "IFrame"
+      }
+    ]
+  },
+  {
+    "path": "/remote-supervision/corporate-statistics",
+    "name": "remotesupervision",
+    "component": "Layout",
+    "redirect": "/remote-supervision/corporate-statistics",
+    "meta": {
+      "title": "非现场监管",
+      "icon": "InteractionOutlined"
+    },
+    "children": [
+      {
+        "path": "corporate-statistics",
+        "name": "corporate-statistics",
+        "meta": {
+          "title": "企业统计分析",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=34191f4217f9368a"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "adverse-reaction",
+        "name": "adverse-reaction",
+        "meta": {
+          "title": "不良反应",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=cb71f4267387e3cc"
+        },
+        "component": "IFrame"
+      }
+    ]
+  },
+  {
+    "path": "/ddt",
+    "name": "ddt",
+    "component": "Layout",
+    "redirect": "/ddt/trend-analysis",
+    "meta": {
+      "title": "药械追溯",
+      "icon": "ReadOutlined"
+    },
+    "children": [
+      {
+        "path": "trend-analysis",
+        "name": "trend-analysis",
+        "meta": {
+          "title": "趋势分析",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=cb71f4267387e3cc"
+        },
+        "component": "IFrame"
+      },
+      {
+        "path": "rise",
+        "name": "rise",
+        "meta": {
+          "title": "企业监管指标",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=a02e6e9c934a4f85"
+        },
+        "component": "IFrame"
+      },  
+      {
+        "path": "btt",
+        "name": "btt",
+        "meta": {
+          "title": "企业类型",
+          "frameSrc": "http://10.4.129.55:8080/dataviz-web/src/q.html?s=e8720b19281c35b6"
+        },
+        "component": "IFrame"
+      }
+    ]
   }
 ]
